@@ -23,7 +23,7 @@ app.post('/ajouter', (req, res) => {
  console.log('sauvegarder dans la BD')
  res.redirect('/')
  })
-}) 
+})  
 
 //////////////////////////////////////////////////// Connection à mongoDB et au serveur nodeJS
 let db // variable qui contiendra le lien sur la BD
