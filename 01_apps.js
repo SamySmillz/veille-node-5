@@ -8,16 +8,6 @@ const bodyParser= require('body-parser')
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('view engine', 'ejs'); // générateur de template
 
-let db // variable qui contiendra le lien sur la BD
-
-MongoClient.connect('mongodb://127.0.0.1:27017/carnet_adresse', (err, database) => {
- if (err) return console.log(err)
- db = database
-// lancement du serveur Express sur le port 8081
- app.listen(8081, () => {
- console.log('connexion à la BD et on écoute sur le port 8081')
- })
-})
 
 app.get('/', function (req, res) {
 var cursor = db.collection('adresse')
@@ -28,4 +18,17 @@ var cursor = db.collection('adresse')
   res.render('gabarit.ejs', {adresses: resultat})  
   });
    //res.send('Hello World');
+})
+
+
+//////////////////////////////////////////////////// Connection à mongoDB et au serveur nodeJS
+let db // variable qui contiendra le lien sur la BD
+
+MongoClient.connect('mongodb://127.0.0.1:27017', (err, database) => {
+ if (err) return console.log(err)
+ db = database.db('carnet_adresse')
+// lancement du serveur Express sur le port 8081
+ app.listen(8081, () => {
+ console.log('connexion à la BD et on écoute sur le port 8081')
+ })
 })
