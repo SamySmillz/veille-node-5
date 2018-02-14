@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const fs = require('fs')
 app.use(express.static('public'));
 /* on associe le moteur de vue au module «ejs» */
 const MongoClient = require('mongodb').MongoClient
