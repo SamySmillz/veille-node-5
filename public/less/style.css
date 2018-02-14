@@ -1,65 +1,79 @@
 header {
-  height: 175px;
+	        height: 175px;
 }
 .fa-5x {
-  font-size: 5em;
-  justify-content: center !important;
-  display: flex !important;
+    font-size: 5em;
+    justify-content: center !important;
+    display: flex !important;
 }
-section {
-  display: flex;
-  justify-content: center;
+
+section{
+	display: flex;
+    justify-content: center;
 }
-body {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
+body{
+	background-color:#fff;
+	display: flex;
+    flex-direction: column;
 }
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+
+table{
+	font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
-td,
-tr {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+
+td, tr {
+	border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
-tr {
-  background-color: #fff;
+
+
+tr{
+	background-color: #fff;
 }
+
 tr:nth-child(even) {
-  background-color: #dddddd;
+    background-color: #dddddd;
 }
+
+
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+ 
 li {
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
 }
+ 
 li:last-child {
   border: none;
 }
+ 
 li a {
   text-decoration: none;
   color: #000;
   display: block;
   width: max-content;
+ 
   -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
   -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
   -o-transition: font-size 0.3s ease, background-color 0.3s ease;
   -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
   transition: font-size 0.3s ease, background-color 0.3s ease;
 }
+ 
 li a:hover {
   font-size: 30px;
   background: #f6f6f6;
 }
-footer {
-  display: flex;
-  justify-content: center;
+
+footer{
+	display:flex;
+	justify-content: center;
 }
