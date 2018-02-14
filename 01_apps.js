@@ -7,7 +7,6 @@ const bodyParser= require('body-parser')
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('view engine', 'ejs'); // générateur de template
 
-
 app.get('/', function (req, res) {
 var cursor = db.collection('adresse')
                 .find().toArray(function(err, resultat){
@@ -18,7 +17,13 @@ var cursor = db.collection('adresse')
   });
    //res.send('Hello World');
 })
-
+app.post('/ajouter', (req, res) => {
+ db.collection('adresse').save(req.body, (err, result) => {
+ if (err) return console.log(err)
+ console.log('sauvegarder dans la BD')
+ res.redirect('/')
+ })
+})
 
 //////////////////////////////////////////////////// Connection à mongoDB et au serveur nodeJS
 let db // variable qui contiendra le lien sur la BD

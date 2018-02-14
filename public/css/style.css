@@ -1,5 +1,20 @@
+header{
+	        height: 175px;
+}
+.fa-5x {
+    font-size: 5em;
+    justify-content: center !important;
+    display: flex !important;
+}
+
+section{
+	display: flex;
+    justify-content: center;
+}
 body{
 	background-color:#fff;
+	display: flex;
+    flex-direction: column;
 }
 
 table{
@@ -56,4 +71,9 @@ li a {
 li a:hover {
   font-size: 30px;
   background: #f6f6f6;
+}
+
+footer{
+	display:flex;
+	justify-content: center;
 }
